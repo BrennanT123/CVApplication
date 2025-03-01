@@ -1,0 +1,90 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.personalInfo input
+{
+
+display: block;
+margin: 1rem;
+  
+}
+.personalInfo
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.form
+{
+  width: 50vw;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 3px .01px rgb(214, 214, 214);
+  display: flex;
+  flex-direction: column;
+}
+.preview
+{
+  width: 50vw;
+}
+
+.parentContainer
+{
+  display: flex;
+}
+
+.personalInfo input:invalid
+{
+  border: red solid;
+}
+input, textarea
+{
+  flex-grow: 1;
+  margin: 1rem;
+}
+
+.form *
+{
+
+}
+.form > *
+{
+
+  flex-grow: 1;
+  text-align: left;
+}
+button
+{
+  background-color: rgb(51, 51, 255);
+  color: white;
+  transition: transform .2s ease;
+  margin: 1rem;
+}
+button:hover
+{
+  transform: translateY(-5px);
+}
+
+.deleteButton 
+{
+  border: red 2px solid;
+  background-color: white;
+  color: black;
+  transition: transform .2s ease;
+}
+.deleteButton:hover
+{
+  transform: translateY(-5px);
+  border: red 2px solid;
+}
+
+.applicantSkill, .applicantEducation, .applicantExperience
+{
+  display: flex;
+  flex-direction: column;
+}
+
