@@ -19,7 +19,7 @@ margin: 1rem;
   flex-direction: column;
 }
 
-.form
+.form, .preview
 {
   width: 50vw;
   border-radius: 2rem;
@@ -75,6 +75,7 @@ button:hover
   background-color: white;
   color: black;
   transition: transform .2s ease;
+  width: fit-content;
 }
 .deleteButton:hover
 {

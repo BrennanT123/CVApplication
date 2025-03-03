@@ -1,4 +1,4 @@
-
+import handleChange from "./handleChange";
 
 function Education({data, handleEducationUpdate})
 {
@@ -12,6 +12,11 @@ function Education({data, handleEducationUpdate})
     ]);
 
     }
+
+
+
+
+
     const onDelete = (data,key)=>
         {
             const newData = data.filter((item) => item.id !== key);
@@ -21,11 +26,11 @@ function Education({data, handleEducationUpdate})
         <div>
             <div className='education'>
                 <h2>Education</h2>
-                {data.map((e) => (
+                {data.map((e,index) => (
                 <div key={e.id} className='applicantEducation'>
-                    <input type="text" name='school' placeholder='School'/>
-                    <input type="text" name='degree' placeholder='Degree'/>
-                    <input type="text" name='year' placeholder='Year' />
+                    <input type="text" name='school' placeholder='School' value={e.school} onChange={(event)=>handleChange(index,'school',event.target.value,handleEducationUpdate,data)}/>
+                    <input type="text" name='degree' placeholder='Degree' value={e.degree} onChange={(event)=>handleChange(index,'degree',event.target.value,handleEducationUpdate,data)}/>
+                    <input type="text" name='year' placeholder='Year' value={e.year} onChange={(event)=>handleChange(index,'year',event.target.value,handleEducationUpdate,data)}/>
                     <button className='deleteButton' onClick={ ()=> onDelete(data,e.id)}>
                         Delete
                     </button>

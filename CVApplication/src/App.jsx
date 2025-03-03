@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import CVForm from './cvForm';
 import './App.css'
+import CVPreview from './cvPreview';
 
 function App() {
   const [cvInputs, setCVInputs] = useState(
@@ -32,6 +33,7 @@ function App() {
 
       </div>
       <div className='preview'>
+        <CVPreview cvData = {cvInputs}></CVPreview>
 
       </div>
     </div>

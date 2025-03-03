@@ -1,3 +1,4 @@
+import handleChange from "./handleChange";
 
 
 function Skill({data, handleSkillUpdate})
@@ -19,9 +20,9 @@ function Skill({data, handleSkillUpdate})
         <div>
             <div className='education'>
                 <h2>Skills</h2>
-                {data.map((e) => (
+                {data.map((e,index) => (
                 <div key={e.id} className='applicantSkill'>
-                    <input type="text" name='skill' placeholder='Skill'/>
+                    <input type="text" name='skill' placeholder='Skill' value={e.skill} onChange={(event)=>handleChange(index,'skill',event.target.value,handleSkillUpdate,data)}/>
                     <button className='deleteButton' onClick={ ()=> onDelete(data,e.id)}>
                         Delete
                     </button>
